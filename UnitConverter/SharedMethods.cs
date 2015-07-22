@@ -10,12 +10,7 @@ namespace UnitConverter
     {
         internal void RemoveTrailingZeros(float from, float to, out string fromAnswerForDisplay, out string toAnswerForDisplay)
         {
-            if (from == 0)
-            {
-                fromAnswerForDisplay = "0";
-                toAnswerForDisplay = "0";
-            }
-            else if (to <= 0.009f)
+            if (to <= 0.009f && to >= -0.0009f && to != 0)
             {
                 fromAnswerForDisplay = from.ToString();
                 toAnswerForDisplay = "< 0.01";

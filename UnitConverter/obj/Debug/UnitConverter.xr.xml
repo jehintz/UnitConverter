@@ -22,7 +22,6 @@
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="Children" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="ColumnDefinitions" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
       <RootMethod Name="GetColumnSpan" />
@@ -99,9 +98,6 @@
       <RootProperty Name="ImageSource" />
     </RootType>
     <RootType FullName="UnitConverter.MainPage" />
-    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
-      <RootProperty Name="Width" />
-    </RootType>
     <RootType FullName="UnitConverter.SpeedConverter" />
     <RootType FullName="UnitConverter.TempConverter" />
     <RootType FullName="UnitConverter.VolumeConverter" />

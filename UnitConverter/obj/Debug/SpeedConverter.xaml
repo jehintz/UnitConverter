@@ -34,10 +34,6 @@
 
         <!--TODO: Content should be placed within the following grid-->
         <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="65*"/>
-                <ColumnDefinition Width="297*"/>
-            </Grid.ColumnDefinitions>
             <TextBlock HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="NoWrap" Text="Convert" VerticalAlignment="Top" FontSize="18"/>
             <TextBox x:ConnectionId='2' x:Name="speedEntryBox" Margin="0,23,197,0" Text="0" VerticalAlignment="Top" RenderTransformOrigin="0.505,0.578" TextAlignment="Right" InputScope="Number" Grid.ColumnSpan="2"                                                                      />
             <TextBlock HorizontalAlignment="Left" Margin="0,80,0,0" TextWrapping="Wrap" Text="To" VerticalAlignment="Top" FontSize="18"/>
@@ -49,7 +45,7 @@
                 <ComboBoxItem Content="Meters/Second"/>
                 <ComboBoxItem Content="Miles/Hour"/>
             </ComboBox>
-            <ComboBox x:ConnectionId='4' x:Name="fromSpeedSelector" Margin="104.954,14,0,0" VerticalAlignment="Top" PlaceholderText="Select Unit" Grid.Column="1"                                                      >
+            <ComboBox x:ConnectionId='4' x:Name="fromSpeedSelector" Margin="170,14,0,0" VerticalAlignment="Top" PlaceholderText="Select Unit" Grid.Column="1"                                                      >
                 <ComboBoxItem Content="Feet/Second"/>
                 <ComboBoxItem Content="Kilometers/Hour"/>
                 <ComboBoxItem Content="Meters/Second"/>

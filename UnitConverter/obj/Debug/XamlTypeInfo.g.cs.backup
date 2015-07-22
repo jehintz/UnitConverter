@@ -124,29 +124,35 @@ namespace UnitConverter.UnitConverter_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[10];
-            _typeNameTable[0] = "UnitConverter.MainPage";
+            _typeNameTable = new string[13];
+            _typeNameTable[0] = "UnitConverter.LengthConverter";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "UnitConverter.VolumeConverter";
-            _typeNameTable[4] = "UnitConverter.Common.NavigationHelper";
-            _typeNameTable[5] = "Windows.UI.Xaml.DependencyObject";
-            _typeNameTable[6] = "UnitConverter.Common.ObservableDictionary";
-            _typeNameTable[7] = "Object";
-            _typeNameTable[8] = "String";
-            _typeNameTable[9] = "UnitConverter.WeightConverter";
+            _typeNameTable[3] = "UnitConverter.Common.NavigationHelper";
+            _typeNameTable[4] = "Windows.UI.Xaml.DependencyObject";
+            _typeNameTable[5] = "UnitConverter.Common.ObservableDictionary";
+            _typeNameTable[6] = "Object";
+            _typeNameTable[7] = "String";
+            _typeNameTable[8] = "UnitConverter.MainPage";
+            _typeNameTable[9] = "UnitConverter.SpeedConverter";
+            _typeNameTable[10] = "UnitConverter.TempConverter";
+            _typeNameTable[11] = "UnitConverter.VolumeConverter";
+            _typeNameTable[12] = "UnitConverter.WeightConverter";
 
-            _typeTable = new global::System.Type[10];
-            _typeTable[0] = typeof(global::UnitConverter.MainPage);
+            _typeTable = new global::System.Type[13];
+            _typeTable[0] = typeof(global::UnitConverter.LengthConverter);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::UnitConverter.VolumeConverter);
-            _typeTable[4] = typeof(global::UnitConverter.Common.NavigationHelper);
-            _typeTable[5] = typeof(global::Windows.UI.Xaml.DependencyObject);
-            _typeTable[6] = typeof(global::UnitConverter.Common.ObservableDictionary);
-            _typeTable[7] = typeof(global::System.Object);
-            _typeTable[8] = typeof(global::System.String);
-            _typeTable[9] = typeof(global::UnitConverter.WeightConverter);
+            _typeTable[3] = typeof(global::UnitConverter.Common.NavigationHelper);
+            _typeTable[4] = typeof(global::Windows.UI.Xaml.DependencyObject);
+            _typeTable[5] = typeof(global::UnitConverter.Common.ObservableDictionary);
+            _typeTable[6] = typeof(global::System.Object);
+            _typeTable[7] = typeof(global::System.String);
+            _typeTable[8] = typeof(global::UnitConverter.MainPage);
+            _typeTable[9] = typeof(global::UnitConverter.SpeedConverter);
+            _typeTable[10] = typeof(global::UnitConverter.TempConverter);
+            _typeTable[11] = typeof(global::UnitConverter.VolumeConverter);
+            _typeTable[12] = typeof(global::UnitConverter.WeightConverter);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -181,11 +187,14 @@ namespace UnitConverter.UnitConverter_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_MainPage() { return new global::UnitConverter.MainPage(); }
-        private object Activate_3_VolumeConverter() { return new global::UnitConverter.VolumeConverter(); }
-        private object Activate_6_ObservableDictionary() { return new global::UnitConverter.Common.ObservableDictionary(); }
-        private object Activate_9_WeightConverter() { return new global::UnitConverter.WeightConverter(); }
-        private void MapAdd_6_ObservableDictionary(object instance, object key, object item)
+        private object Activate_0_LengthConverter() { return new global::UnitConverter.LengthConverter(); }
+        private object Activate_5_ObservableDictionary() { return new global::UnitConverter.Common.ObservableDictionary(); }
+        private object Activate_8_MainPage() { return new global::UnitConverter.MainPage(); }
+        private object Activate_9_SpeedConverter() { return new global::UnitConverter.SpeedConverter(); }
+        private object Activate_10_TempConverter() { return new global::UnitConverter.TempConverter(); }
+        private object Activate_11_VolumeConverter() { return new global::UnitConverter.VolumeConverter(); }
+        private object Activate_12_WeightConverter() { return new global::UnitConverter.WeightConverter(); }
+        private void MapAdd_5_ObservableDictionary(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.String, global::System.Object>)instance;
             var newKey = (global::System.String)key;
@@ -203,9 +212,11 @@ namespace UnitConverter.UnitConverter_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  UnitConverter.MainPage
+            case 0:   //  UnitConverter.LengthConverter
                 userType = new global::UnitConverter.UnitConverter_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_MainPage;
+                userType.Activator = Activate_0_LengthConverter;
+                userType.AddMemberName("NavigationHelper");
+                userType.AddMemberName("DefaultViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -218,45 +229,70 @@ namespace UnitConverter.UnitConverter_XamlTypeInfo
                 xamlType = new global::UnitConverter.UnitConverter_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  UnitConverter.VolumeConverter
-                userType = new global::UnitConverter.UnitConverter_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_VolumeConverter;
-                userType.AddMemberName("NavigationHelper");
-                userType.AddMemberName("DefaultViewModel");
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 4:   //  UnitConverter.Common.NavigationHelper
+            case 3:   //  UnitConverter.Common.NavigationHelper
                 userType = new global::UnitConverter.UnitConverter_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 5:   //  Windows.UI.Xaml.DependencyObject
+            case 4:   //  Windows.UI.Xaml.DependencyObject
                 xamlType = new global::UnitConverter.UnitConverter_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 6:   //  UnitConverter.Common.ObservableDictionary
+            case 5:   //  UnitConverter.Common.ObservableDictionary
                 userType = new global::UnitConverter.UnitConverter_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.DictionaryAdd = MapAdd_6_ObservableDictionary;
+                userType.DictionaryAdd = MapAdd_5_ObservableDictionary;
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 7:   //  Object
+            case 6:   //  Object
                 xamlType = new global::UnitConverter.UnitConverter_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 8:   //  String
+            case 7:   //  String
                 xamlType = new global::UnitConverter.UnitConverter_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 9:   //  UnitConverter.WeightConverter
+            case 8:   //  UnitConverter.MainPage
                 userType = new global::UnitConverter.UnitConverter_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_9_WeightConverter;
+                userType.Activator = Activate_8_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 9:   //  UnitConverter.SpeedConverter
+                userType = new global::UnitConverter.UnitConverter_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_9_SpeedConverter;
+                userType.AddMemberName("NavigationHelper");
+                userType.AddMemberName("DefaultViewModel");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 10:   //  UnitConverter.TempConverter
+                userType = new global::UnitConverter.UnitConverter_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_10_TempConverter;
+                userType.AddMemberName("NavigationHelper");
+                userType.AddMemberName("DefaultViewModel");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 11:   //  UnitConverter.VolumeConverter
+                userType = new global::UnitConverter.UnitConverter_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_11_VolumeConverter;
+                userType.AddMemberName("NavigationHelper");
+                userType.AddMemberName("DefaultViewModel");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 12:   //  UnitConverter.WeightConverter
+                userType = new global::UnitConverter.UnitConverter_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_12_WeightConverter;
                 userType.AddMemberName("NavigationHelper");
                 userType.AddMemberName("DefaultViewModel");
                 userType.SetIsLocalType();
@@ -267,22 +303,52 @@ namespace UnitConverter.UnitConverter_XamlTypeInfo
         }
 
 
-        private object get_0_VolumeConverter_NavigationHelper(object instance)
+        private object get_0_LengthConverter_NavigationHelper(object instance)
+        {
+            var that = (global::UnitConverter.LengthConverter)instance;
+            return that.NavigationHelper;
+        }
+        private object get_1_LengthConverter_DefaultViewModel(object instance)
+        {
+            var that = (global::UnitConverter.LengthConverter)instance;
+            return that.DefaultViewModel;
+        }
+        private object get_2_SpeedConverter_NavigationHelper(object instance)
+        {
+            var that = (global::UnitConverter.SpeedConverter)instance;
+            return that.NavigationHelper;
+        }
+        private object get_3_SpeedConverter_DefaultViewModel(object instance)
+        {
+            var that = (global::UnitConverter.SpeedConverter)instance;
+            return that.DefaultViewModel;
+        }
+        private object get_4_TempConverter_NavigationHelper(object instance)
+        {
+            var that = (global::UnitConverter.TempConverter)instance;
+            return that.NavigationHelper;
+        }
+        private object get_5_TempConverter_DefaultViewModel(object instance)
+        {
+            var that = (global::UnitConverter.TempConverter)instance;
+            return that.DefaultViewModel;
+        }
+        private object get_6_VolumeConverter_NavigationHelper(object instance)
         {
             var that = (global::UnitConverter.VolumeConverter)instance;
             return that.NavigationHelper;
         }
-        private object get_1_VolumeConverter_DefaultViewModel(object instance)
+        private object get_7_VolumeConverter_DefaultViewModel(object instance)
         {
             var that = (global::UnitConverter.VolumeConverter)instance;
             return that.DefaultViewModel;
         }
-        private object get_2_WeightConverter_NavigationHelper(object instance)
+        private object get_8_WeightConverter_NavigationHelper(object instance)
         {
             var that = (global::UnitConverter.WeightConverter)instance;
             return that.NavigationHelper;
         }
-        private object get_3_WeightConverter_DefaultViewModel(object instance)
+        private object get_9_WeightConverter_DefaultViewModel(object instance)
         {
             var that = (global::UnitConverter.WeightConverter)instance;
             return that.DefaultViewModel;
@@ -295,28 +361,64 @@ namespace UnitConverter.UnitConverter_XamlTypeInfo
 
             switch (longMemberName)
             {
+            case "UnitConverter.LengthConverter.NavigationHelper":
+                userType = (global::UnitConverter.UnitConverter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("UnitConverter.LengthConverter");
+                xamlMember = new global::UnitConverter.UnitConverter_XamlTypeInfo.XamlMember(this, "NavigationHelper", "UnitConverter.Common.NavigationHelper");
+                xamlMember.Getter = get_0_LengthConverter_NavigationHelper;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "UnitConverter.LengthConverter.DefaultViewModel":
+                userType = (global::UnitConverter.UnitConverter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("UnitConverter.LengthConverter");
+                xamlMember = new global::UnitConverter.UnitConverter_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "UnitConverter.Common.ObservableDictionary");
+                xamlMember.Getter = get_1_LengthConverter_DefaultViewModel;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "UnitConverter.SpeedConverter.NavigationHelper":
+                userType = (global::UnitConverter.UnitConverter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("UnitConverter.SpeedConverter");
+                xamlMember = new global::UnitConverter.UnitConverter_XamlTypeInfo.XamlMember(this, "NavigationHelper", "UnitConverter.Common.NavigationHelper");
+                xamlMember.Getter = get_2_SpeedConverter_NavigationHelper;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "UnitConverter.SpeedConverter.DefaultViewModel":
+                userType = (global::UnitConverter.UnitConverter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("UnitConverter.SpeedConverter");
+                xamlMember = new global::UnitConverter.UnitConverter_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "UnitConverter.Common.ObservableDictionary");
+                xamlMember.Getter = get_3_SpeedConverter_DefaultViewModel;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "UnitConverter.TempConverter.NavigationHelper":
+                userType = (global::UnitConverter.UnitConverter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("UnitConverter.TempConverter");
+                xamlMember = new global::UnitConverter.UnitConverter_XamlTypeInfo.XamlMember(this, "NavigationHelper", "UnitConverter.Common.NavigationHelper");
+                xamlMember.Getter = get_4_TempConverter_NavigationHelper;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "UnitConverter.TempConverter.DefaultViewModel":
+                userType = (global::UnitConverter.UnitConverter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("UnitConverter.TempConverter");
+                xamlMember = new global::UnitConverter.UnitConverter_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "UnitConverter.Common.ObservableDictionary");
+                xamlMember.Getter = get_5_TempConverter_DefaultViewModel;
+                xamlMember.SetIsReadOnly();
+                break;
             case "UnitConverter.VolumeConverter.NavigationHelper":
                 userType = (global::UnitConverter.UnitConverter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("UnitConverter.VolumeConverter");
                 xamlMember = new global::UnitConverter.UnitConverter_XamlTypeInfo.XamlMember(this, "NavigationHelper", "UnitConverter.Common.NavigationHelper");
-                xamlMember.Getter = get_0_VolumeConverter_NavigationHelper;
+                xamlMember.Getter = get_6_VolumeConverter_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             case "UnitConverter.VolumeConverter.DefaultViewModel":
                 userType = (global::UnitConverter.UnitConverter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("UnitConverter.VolumeConverter");
                 xamlMember = new global::UnitConverter.UnitConverter_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "UnitConverter.Common.ObservableDictionary");
-                xamlMember.Getter = get_1_VolumeConverter_DefaultViewModel;
+                xamlMember.Getter = get_7_VolumeConverter_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             case "UnitConverter.WeightConverter.NavigationHelper":
                 userType = (global::UnitConverter.UnitConverter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("UnitConverter.WeightConverter");
                 xamlMember = new global::UnitConverter.UnitConverter_XamlTypeInfo.XamlMember(this, "NavigationHelper", "UnitConverter.Common.NavigationHelper");
-                xamlMember.Getter = get_2_WeightConverter_NavigationHelper;
+                xamlMember.Getter = get_8_WeightConverter_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             case "UnitConverter.WeightConverter.DefaultViewModel":
                 userType = (global::UnitConverter.UnitConverter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("UnitConverter.WeightConverter");
                 xamlMember = new global::UnitConverter.UnitConverter_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "UnitConverter.Common.ObservableDictionary");
-                xamlMember.Getter = get_3_WeightConverter_DefaultViewModel;
+                xamlMember.Getter = get_9_WeightConverter_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             }
