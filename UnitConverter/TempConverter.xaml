@@ -38,7 +38,7 @@
             <TextBlock HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="NoWrap" Text="Convert" VerticalAlignment="Top" FontSize="18"/>
             <TextBox x:Name="tempEntryBox" Margin="0,23,197,0" Text="0" VerticalAlignment="Top" RenderTransformOrigin="0.505,0.578" TextAlignment="Right" InputScope="Number" LostFocus="tempEntryBox_LostFocus" GotFocus="tempEntryBox_GotFocus"/>
             <TextBlock HorizontalAlignment="Left" Margin="0,80,0,0" TextWrapping="Wrap" Text="To" VerticalAlignment="Top" FontSize="18"/>
-            <TextBlock x:Name="tempAnswerDisplay" HorizontalAlignment="Left" Margin="0,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="40" FontWeight="Bold"/>
+            <TextBlock x:Name="tempAnswerDisplay" HorizontalAlignment="Left" Margin="0,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="40" FontWeight="Bold" IsTextSelectionEnabled="True"/>
             <TextBlock x:Name="errorDisplay" HorizontalAlignment="Left" Margin="68,2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" FontSize="18"/>
             <ComboBox x:Name="toTempSelector" Margin="00,93,0,0" VerticalAlignment="Top" PlaceholderText="Select Unit" SelectionChanged="toTempSelector_SelectionChanged">
                 <ComboBoxItem Content="Celsius"/>

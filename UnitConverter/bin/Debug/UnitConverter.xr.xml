@@ -46,6 +46,7 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="FontWeight" />
+      <RootProperty Name="IsTextSelectionEnabled" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="Style" />
       <RootProperty Name="FontFamily" />
