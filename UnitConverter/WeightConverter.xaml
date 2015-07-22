@@ -9,6 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Page.BottomAppBar>
         <CommandBar x:Name="weightAppBar" ClosedDisplayMode="Minimal">
+            <AppBarButton x:Name="switchButton" Icon="Switch" Label="Switch" Click="switchButton_Click"/>
                 <AppBarButton x:Name="clearButton" Icon="Clear" Label="Clear All" Click="AppBarButton_Click"/>
         </CommandBar>
     </Page.BottomAppBar>

@@ -10,7 +10,8 @@
 
     <Page.BottomAppBar>
         <CommandBar x:Name="speedAppBar" ClosedDisplayMode="Minimal">
-            <AppBarButton x:ConnectionId='1' x:Name="clearButton" Icon="Clear" Label="Clear All"                          />
+            <AppBarButton x:ConnectionId='1' x:Name="switchButton" Icon="Switch" Label="Switch"                           />
+            <AppBarButton x:ConnectionId='2' x:Name="clearButton" Icon="Clear" Label="Clear All"                          />
         </CommandBar>
     </Page.BottomAppBar>
 
@@ -35,17 +36,17 @@
         <!--TODO: Content should be placed within the following grid-->
         <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
             <TextBlock HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="NoWrap" Text="Convert" VerticalAlignment="Top" FontSize="18"/>
-            <TextBox x:ConnectionId='2' x:Name="speedEntryBox" Margin="0,23,197,0" Text="0" VerticalAlignment="Top" RenderTransformOrigin="0.505,0.578" TextAlignment="Right" InputScope="Number" Grid.ColumnSpan="2"                                                                      />
+            <TextBox x:ConnectionId='3' x:Name="speedEntryBox" Margin="0,23,197,0" Text="0" VerticalAlignment="Top" RenderTransformOrigin="0.505,0.578" TextAlignment="Right" InputScope="Number" Grid.ColumnSpan="2"                                                                      />
             <TextBlock HorizontalAlignment="Left" Margin="0,80,0,0" TextWrapping="Wrap" Text="To" VerticalAlignment="Top" FontSize="18"/>
             <TextBlock x:Name="speedAnswerDisplay" HorizontalAlignment="Left" Margin="0,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="40" FontWeight="Bold"/>
             <TextBlock x:Name="errorDisplay" HorizontalAlignment="Left" Margin="2.954,2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" FontSize="18" Grid.Column="1"/>
-            <ComboBox x:ConnectionId='3' x:Name="toSpeedSelector" Margin="00,93,0,0" VerticalAlignment="Top" PlaceholderText="Select Unit" Grid.ColumnSpan="2"                                                    >
+            <ComboBox x:ConnectionId='4' x:Name="toSpeedSelector" Margin="00,93,0,0" VerticalAlignment="Top" PlaceholderText="Select Unit" Grid.ColumnSpan="2"                                                    >
                 <ComboBoxItem Content="Feet/Second"/>
                 <ComboBoxItem Content="Kilometers/Hour"/>
                 <ComboBoxItem Content="Meters/Second"/>
                 <ComboBoxItem Content="Miles/Hour"/>
             </ComboBox>
-            <ComboBox x:ConnectionId='4' x:Name="fromSpeedSelector" Margin="170,14,0,0" VerticalAlignment="Top" PlaceholderText="Select Unit" Grid.Column="1"                                                      >
+            <ComboBox x:ConnectionId='5' x:Name="fromSpeedSelector" Margin="170,14,0,0" VerticalAlignment="Top" PlaceholderText="Select Unit" Grid.Column="1"                                                      >
                 <ComboBoxItem Content="Feet/Second"/>
                 <ComboBoxItem Content="Kilometers/Hour"/>
                 <ComboBoxItem Content="Meters/Second"/>

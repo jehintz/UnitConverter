@@ -673,5 +673,17 @@ namespace UnitConverter
                 textBox.SelectAll();
             }
         }
+
+        private void switchButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (fromVolumeSelector.SelectedIndex >= 0 && toVolumeSelector.SelectedIndex >= 0)
+            {
+                int fromSelectedIndex = fromVolumeSelector.SelectedIndex;
+                int toSelectedIndex = toVolumeSelector.SelectedIndex;
+
+                fromVolumeSelector.SelectedIndex = toSelectedIndex;
+                toVolumeSelector.SelectedIndex = fromSelectedIndex;
+            }
+        }
     }
 }

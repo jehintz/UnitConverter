@@ -228,5 +228,17 @@ namespace UnitConverter
             }
         }
 
+        private void switchButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (fromTempSelector.SelectedIndex >= 0 && toTempSelector.SelectedIndex >= 0)
+            {
+                int fromSelectedIndex = fromTempSelector.SelectedIndex;
+                int toSelectedIndex = toTempSelector.SelectedIndex;
+
+                fromTempSelector.SelectedIndex = toSelectedIndex;
+                toTempSelector.SelectedIndex = fromSelectedIndex;
+            }
+        }
+
     }
 }

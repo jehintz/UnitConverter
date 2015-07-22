@@ -8,38 +8,10 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <!--<Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="10,50,0,0" TextWrapping="NoWrap" Text="Convert" VerticalAlignment="Top"/>
-        <TextBox x:Name="volumeEntryBox" HorizontalAlignment="Left" Margin="10,70,0,0" Text="0" VerticalAlignment="Top" RenderTransformOrigin="0.505,0.578" Width="185" TextAlignment="Right" InputScope="Number" LostFocus="volumeEntryBox_LostFocus"/>
-        <ComboBox x:Name="fromVolumeSelector" HorizontalAlignment="Left" Margin="200,60,0,0" VerticalAlignment="Top" Width="190" PlaceholderText="Select Unit">
-            <ComboBoxItem Content="Cups"/>
-            <ComboBoxItem Content="Fluid Ounces"/>
-            <ComboBoxItem Content="Gallons"/>
-            <ComboBoxItem Content="Liters"/>
-            <ComboBoxItem Content="Milliliters"/>
-            <ComboBoxItem Content="Pints"/>
-            <ComboBoxItem Content="Quarts"/>
-            <ComboBoxItem Content="Tablespoons"/>
-            <ComboBoxItem Content="Teaspoons"/>
-        </ComboBox>
-        <TextBlock HorizontalAlignment="Left" Margin="10,130,0,0" TextWrapping="Wrap" Text="To" VerticalAlignment="Top"/>
-        <ComboBox x:Name="toVolumeSelector" HorizontalAlignment="Left" Margin="10,140,0,0" VerticalAlignment="Top" Width="380" PlaceholderText="Select Unit">
-            <ComboBoxItem Content="Cups"/>
-            <ComboBoxItem Content="Fluid Ounces"/>
-            <ComboBoxItem Content="Gallons"/>
-            <ComboBoxItem Content="Liters"/>
-            <ComboBoxItem Content="Milliliters"/>
-            <ComboBoxItem Content="Pints"/>
-            <ComboBoxItem Content="Quarts"/>
-            <ComboBoxItem Content="Tablespoons"/>
-            <ComboBoxItem Content="Teaspoons"/>
-        </ComboBox>
-        <TextBlock x:Name="volumeAnswerDisplay" HorizontalAlignment="Left" Margin="10,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="40" FontWeight="Bold"/>
-    </Grid>-->
-
     <Page.BottomAppBar>
         <CommandBar x:Name="volumeAppBar" ClosedDisplayMode="Minimal">
-            <AppBarButton x:ConnectionId='1' x:Name="clearButton" Icon="Clear" Label="Clear All"                          />
+            <AppBarButton x:ConnectionId='1' x:Name="switchButton" Icon="Switch" Label="Switch"                           />
+            <AppBarButton x:ConnectionId='2' x:Name="clearButton" Icon="Clear" Label="Clear All"                          />
         </CommandBar>
     </Page.BottomAppBar>
 
@@ -64,11 +36,11 @@
         <!--TODO: Content should be placed within the following grid-->
         <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
             <TextBlock HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="NoWrap" Text="Convert" VerticalAlignment="Top" FontSize="18"/>
-            <TextBox x:ConnectionId='2' x:Name="volumeEntryBox" Margin="0,23,197,0" Text="0" VerticalAlignment="Top" RenderTransformOrigin="0.505,0.578" TextAlignment="Right" InputScope="Number"                                                                        />
+            <TextBox x:ConnectionId='3' x:Name="volumeEntryBox" Margin="0,23,197,0" Text="0" VerticalAlignment="Top" RenderTransformOrigin="0.505,0.578" TextAlignment="Right" InputScope="Number"                                                                        />
             <TextBlock HorizontalAlignment="Left" Margin="0,80,0,0" TextWrapping="Wrap" Text="To" VerticalAlignment="Top" FontSize="18"/>
             <TextBlock x:Name="volumeAnswerDisplay" HorizontalAlignment="Left" Margin="0,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="40" FontWeight="Bold"/>
             <TextBlock x:Name="errorDisplay" HorizontalAlignment="Left" Margin="68,2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" FontSize="18"/>
-            <ComboBox x:ConnectionId='3' x:Name="toVolumeSelector" Margin="00,93,0,0" VerticalAlignment="Top" PlaceholderText="Select Unit"                                                     >
+            <ComboBox x:ConnectionId='4' x:Name="toVolumeSelector" Margin="00,93,0,0" VerticalAlignment="Top" PlaceholderText="Select Unit"                                                     >
                 <ComboBoxItem Content="Cups"/>
                 <ComboBoxItem Content="Fluid Ounces"/>
                 <ComboBoxItem Content="Gallons"/>
@@ -79,7 +51,7 @@
                 <ComboBoxItem Content="Tablespoons"/>
                 <ComboBoxItem Content="Teaspoons"/>
             </ComboBox>
-            <ComboBox x:ConnectionId='4' x:Name="fromVolumeSelector" Margin="170,14,0,0" VerticalAlignment="Top" PlaceholderText="Select Unit"                                                       >
+            <ComboBox x:ConnectionId='5' x:Name="fromVolumeSelector" Margin="170,14,0,0" VerticalAlignment="Top" PlaceholderText="Select Unit"                                                       >
                 <ComboBoxItem Content="Cups"/>
                 <ComboBoxItem Content="Fluid Ounces"/>
                 <ComboBoxItem Content="Gallons"/>

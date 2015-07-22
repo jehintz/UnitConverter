@@ -10,6 +10,7 @@
 
     <Page.BottomAppBar>
         <CommandBar x:Name="speedAppBar" ClosedDisplayMode="Minimal">
+            <AppBarButton x:Name="switchButton" Icon="Switch" Label="Switch" Click="switchButton_Click"/>
             <AppBarButton x:Name="clearButton" Icon="Clear" Label="Clear All" Click="clearButton_Click"/>
         </CommandBar>
     </Page.BottomAppBar>

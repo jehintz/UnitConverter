@@ -271,6 +271,18 @@ namespace UnitConverter
             }
         }
 
+        private void switchButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (fromSpeedSelector.SelectedIndex >= 0 && toSpeedSelector.SelectedIndex >= 0)
+            {
+                int fromSelectedIndex = fromSpeedSelector.SelectedIndex;
+                int toSelectedIndex = toSpeedSelector.SelectedIndex;
+
+                fromSpeedSelector.SelectedIndex = toSelectedIndex;
+                toSpeedSelector.SelectedIndex = fromSelectedIndex;
+            }
+        }
+
 
     }
 }

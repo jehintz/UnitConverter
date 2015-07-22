@@ -422,5 +422,17 @@ namespace UnitConverter
                 textBox.SelectAll();
             }
         }
+
+        private void switchButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (fromWeightSelector.SelectedIndex >= 0 && toWeightSelector.SelectedIndex >= 0)
+            {
+                int fromSelectedIndex = fromWeightSelector.SelectedIndex;
+                int toSelectedIndex = toWeightSelector.SelectedIndex;
+
+                fromWeightSelector.SelectedIndex = toSelectedIndex;
+                toWeightSelector.SelectedIndex = fromSelectedIndex;
+            }
+        }
     }
 }

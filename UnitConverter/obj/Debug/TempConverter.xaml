@@ -10,7 +10,8 @@
 
     <Page.BottomAppBar>
         <CommandBar x:Name="tempAppBar" ClosedDisplayMode="Minimal">
-            <AppBarButton x:ConnectionId='1' x:Name="clearButton" Icon="Clear" Label="Clear All"                          />
+            <AppBarButton x:ConnectionId='1' x:Name="switchButton" Icon="Switch" Label="Switch"                           />
+            <AppBarButton x:ConnectionId='2' x:Name="clearButton" Icon="Clear" Label="Clear All"                          />
         </CommandBar>
     </Page.BottomAppBar>
 
@@ -35,16 +36,16 @@
         <!--TODO: Content should be placed within the following grid-->
         <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
             <TextBlock HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="NoWrap" Text="Convert" VerticalAlignment="Top" FontSize="18"/>
-            <TextBox x:ConnectionId='2' x:Name="tempEntryBox" Margin="0,23,197,0" Text="0" VerticalAlignment="Top" RenderTransformOrigin="0.505,0.578" TextAlignment="Right" InputScope="Number"                                                                    />
+            <TextBox x:ConnectionId='3' x:Name="tempEntryBox" Margin="0,23,197,0" Text="0" VerticalAlignment="Top" RenderTransformOrigin="0.505,0.578" TextAlignment="Right" InputScope="Number"                                                                    />
             <TextBlock HorizontalAlignment="Left" Margin="0,80,0,0" TextWrapping="Wrap" Text="To" VerticalAlignment="Top" FontSize="18"/>
             <TextBlock x:Name="tempAnswerDisplay" HorizontalAlignment="Left" Margin="0,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="40" FontWeight="Bold"/>
             <TextBlock x:Name="errorDisplay" HorizontalAlignment="Left" Margin="68,2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" FontSize="18"/>
-            <ComboBox x:ConnectionId='3' x:Name="toTempSelector" Margin="00,93,0,0" VerticalAlignment="Top" PlaceholderText="Select Unit"                                                   >
+            <ComboBox x:ConnectionId='4' x:Name="toTempSelector" Margin="00,93,0,0" VerticalAlignment="Top" PlaceholderText="Select Unit"                                                   >
                 <ComboBoxItem Content="Celsius"/>
                 <ComboBoxItem Content="Fahrenheit"/>
                 <ComboBoxItem Content="Kelvin"/>
             </ComboBox>
-            <ComboBox x:ConnectionId='4' x:Name="fromTempSelector" Margin="170,14,0,0" VerticalAlignment="Top" PlaceholderText="Select Unit"                                                     >
+            <ComboBox x:ConnectionId='5' x:Name="fromTempSelector" Margin="170,14,0,0" VerticalAlignment="Top" PlaceholderText="Select Unit"                                                     >
                 <ComboBoxItem Content="Celsius"/>
                 <ComboBoxItem Content="Fahrenheit"/>
                 <ComboBoxItem Content="Kelvin"/>

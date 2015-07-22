@@ -533,5 +533,17 @@ namespace UnitConverter
             }
         }
 
+        private void switchButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (fromLengthSelector.SelectedIndex >= 0 && toLengthSelector.SelectedIndex >= 0)
+            {
+                int fromSelectedIndex = fromLengthSelector.SelectedIndex;
+                int toSelectedIndex = toLengthSelector.SelectedIndex;
+
+                fromLengthSelector.SelectedIndex = toSelectedIndex;
+                toLengthSelector.SelectedIndex = fromSelectedIndex;
+            }
+        }
+
     }
 }
