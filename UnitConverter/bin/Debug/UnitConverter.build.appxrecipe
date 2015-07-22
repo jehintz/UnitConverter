@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>KOLOLOSECOND</Machine>
+    <WindowsUser>Jessica</WindowsUser>
+    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>ac1d7ca5-4ab0-458d-a19f-cb4e8092983c</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Jessica\Documents\Visual Studio 2013\Projects\UnitConverter\UnitConverter\obj\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Jessica\Documents\Visual Studio 2013\Projects\UnitConverter\UnitConverter\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Jessica\Documents\Visual Studio 2013\Projects\UnitConverter\UnitConverter\bin\Debug\UnitConverter.exe">
+      <PackagePath>UnitConverter.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jessica\Documents\Visual Studio 2013\Projects\UnitConverter\UnitConverter\Assets\length.gif">
+      <PackagePath>Assets\length.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jessica\Documents\Visual Studio 2013\Projects\UnitConverter\UnitConverter\Assets\speedfull.gif">
+      <PackagePath>Assets\speedfull.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jessica\Documents\Visual Studio 2013\Projects\UnitConverter\UnitConverter\Assets\tempfull.gif">
+      <PackagePath>Assets\tempfull.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jessica\Documents\Visual Studio 2013\Projects\UnitConverter\UnitConverter\Assets\volumefull.gif">
+      <PackagePath>Assets\volumefull.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jessica\Documents\Visual Studio 2013\Projects\UnitConverter\UnitConverter\Assets\weightfull2.gif">
+      <PackagePath>Assets\weightfull2.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jessica\Documents\Visual Studio 2013\Projects\UnitConverter\UnitConverter\Assets\Logo.scale-240.png">
+      <PackagePath>Assets\Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jessica\Documents\Visual Studio 2013\Projects\UnitConverter\UnitConverter\Assets\SmallLogo.scale-240.png">
+      <PackagePath>Assets\SmallLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jessica\Documents\Visual Studio 2013\Projects\UnitConverter\UnitConverter\Assets\SplashScreen.scale-240.png">
+      <PackagePath>Assets\SplashScreen.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jessica\Documents\Visual Studio 2013\Projects\UnitConverter\UnitConverter\Assets\Square71x71Logo.scale-240.png">
+      <PackagePath>Assets\Square71x71Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jessica\Documents\Visual Studio 2013\Projects\UnitConverter\UnitConverter\Assets\StoreLogo.scale-240.png">
+      <PackagePath>Assets\StoreLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jessica\Documents\Visual Studio 2013\Projects\UnitConverter\UnitConverter\Assets\WideLogo.scale-240.png">
+      <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jessica\Documents\Visual Studio 2013\Projects\UnitConverter\UnitConverter\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jessica\Documents\Visual Studio 2013\Projects\UnitConverter\UnitConverter\bin\Debug\LengthConverter.xbf">
+      <PackagePath>LengthConverter.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jessica\Documents\Visual Studio 2013\Projects\UnitConverter\UnitConverter\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jessica\Documents\Visual Studio 2013\Projects\UnitConverter\UnitConverter\bin\Debug\SpeedConverter.xbf">
+      <PackagePath>SpeedConverter.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jessica\Documents\Visual Studio 2013\Projects\UnitConverter\UnitConverter\bin\Debug\TempConverter.xbf">
+      <PackagePath>TempConverter.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jessica\Documents\Visual Studio 2013\Projects\UnitConverter\UnitConverter\bin\Debug\VolumeConverter.xbf">
+      <PackagePath>VolumeConverter.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jessica\Documents\Visual Studio 2013\Projects\UnitConverter\UnitConverter\bin\Debug\WeightConverter.xbf">
+      <PackagePath>WeightConverter.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jessica\Documents\Visual Studio 2013\Projects\UnitConverter\UnitConverter\bin\Debug\UnitConverter.xr.xml">
+      <PackagePath>UnitConverter.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jessica\Documents\Visual Studio 2013\Projects\UnitConverter\UnitConverter\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

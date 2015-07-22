@@ -1,0 +1,48 @@
+﻿<Page
+    x:Class="UnitConverter.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UnitConverter"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="UNIT CONVERTER" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0" FontFamily="Segoe WP"/>
+            <TextBlock Text="categories" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}" FontFamily="Segoe WP" FontWeight="Normal"/>
+
+            <GridView Margin="0,0,9.833,0" FontFamily="Segoe WP">
+                <GridViewItem x:Name="weightNavTile" Content="Weight" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" VerticalContentAlignment="Bottom" Tapped="weightNavTile_Tapped" FontSize="18" Width="150" Height="150" Foreground="{ThemeResource PhoneForegroundBrush}" BorderBrush="{ThemeResource PhoneAccentBrush}" BorderThickness="2" FontFamily="Segoe WP">
+                    <GridViewItem.Background>
+                        <ImageBrush ImageSource="Assets/weightfull2.gif"/>
+                    </GridViewItem.Background>
+                </GridViewItem>
+                <GridViewItem x:Name="volumeNavTile" Content="Volume" Width="150" Height="150" VerticalAlignment="Top" HorizontalAlignment="Right" VerticalContentAlignment="Bottom" FontSize="18" Margin="10" Tapped="volumeNavTile_Tapped" BorderThickness="2" Foreground="{ThemeResource PhoneForegroundBrush}" BorderBrush="{ThemeResource PhoneAccentBrush}" FontFamily="Segoe WP">
+                    <GridViewItem.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="Assets/volumefull.gif"/>
+                    </GridViewItem.Background>
+                </GridViewItem>
+                <GridViewItem x:Name="distanceNavTile" Content="Length/Distance" Width="150" Height="150" FontSize="18" VerticalContentAlignment="Bottom" BorderBrush="{ThemeResource PhoneAccentBrush}" Foreground="{ThemeResource PhoneForegroundBrush}" BorderThickness="2" Tapped="distanceNavTile_Tapped">
+                    <GridViewItem.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="Assets/length.gif"/>
+                    </GridViewItem.Background>
+                </GridViewItem>
+                <GridViewItem x:Name="Temperature" Content="Temperature" Width="150" Height="150" FontSize="18" VerticalContentAlignment="Bottom" BorderThickness="2" Foreground="{ThemeResource PhoneForegroundBrush}" BorderBrush="{ThemeResource PhoneAccentBrush}" Tapped="Temperature_Tapped">
+                    <GridViewItem.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="Assets/tempfull.gif"/>
+                    </GridViewItem.Background>
+                </GridViewItem>
+                <GridViewItem x:Name="speedNavTile" Content="Speed" BorderThickness="2" Width="150" Height="150" FontSize="18" VerticalContentAlignment="Bottom" Foreground="{ThemeResource PhoneForegroundBrush}" BorderBrush="{ThemeResource PhoneAccentBrush}" Tapped="speedNavTile_Tapped">
+                    <GridViewItem.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="Assets/speedfull.gif"/>
+                    </GridViewItem.Background>
+
+                </GridViewItem>
+            </GridView>
+
+        </StackPanel>
+
+    </Grid>
+</Page>

@@ -1,0 +1,59 @@
+﻿<Page
+    x:Class="UnitConverter.WeightConverter"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UnitConverter"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.BottomAppBar>
+        <CommandBar x:Name="weightAppBar" ClosedDisplayMode="Minimal">
+                <AppBarButton x:Name="clearButton" Icon="Clear" Label="Clear All" Click="AppBarButton_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="WEIGHT" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+            <TextBlock HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="NoWrap" Text="Convert" VerticalAlignment="Top" FontSize="18"/>
+            <TextBox x:Name="weightEntryBox" Margin="0,23,197,0" Text="0" VerticalAlignment="Top" RenderTransformOrigin="0.505,0.578" TextAlignment="Right" InputScope="Number" LostFocus="weightEntryBox_LostFocus" GotFocus="weightEntryBox_GotFocus"/>
+            <TextBlock HorizontalAlignment="Left" Margin="0,80,0,0" TextWrapping="Wrap" Text="To" VerticalAlignment="Top" FontSize="18"/>
+            <TextBlock x:Name="weightAnswerDisplay" HorizontalAlignment="Left" Margin="0,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="40" FontWeight="Bold"/>
+            <TextBlock x:Name="errorDisplay" HorizontalAlignment="Left" Margin="68,2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" FontSize="18"/>
+            <ComboBox x:Name="toWeightSelector" Margin="00,93,0,0" VerticalAlignment="Top" PlaceholderText="Select Unit" SelectionChanged="toWeightSelector_SelectionChanged">
+                <ComboBoxItem Content="Grams"/>
+                <ComboBoxItem Content="Kilograms"/>
+                <ComboBoxItem Content="Milligrams"/>
+                <ComboBoxItem Content="Ounces"/>
+                <ComboBoxItem Content="Pounds"/>
+                <ComboBoxItem Content="Tons"/>
+            </ComboBox>
+            <ComboBox x:Name="fromWeightSelector" Margin="170,14,0,0" VerticalAlignment="Top" PlaceholderText="Select Unit" SelectionChanged="fromWeightSelector_SelectionChanged">
+                <ComboBoxItem Content="Grams"/>
+                <ComboBoxItem Content="Kilograms"/>
+                <ComboBoxItem Content="Milligrams"/>
+                <ComboBoxItem Content="Ounces"/>
+                <ComboBoxItem Content="Pounds"/>
+                <ComboBoxItem Content="Tons"/>
+            </ComboBox>
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,65 @@
+﻿<Page
+    x:Class="UnitConverter.LengthConverter"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UnitConverter"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.BottomAppBar>
+        <CommandBar x:Name="lengthAppBar" ClosedDisplayMode="Minimal">
+            <AppBarButton x:ConnectionId='1' x:Name="clearButton" Icon="Clear" Label="Clear All"                          />
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="LENGTH" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+            <TextBlock HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="NoWrap" Text="Convert" VerticalAlignment="Top" FontSize="18"/>
+            <TextBox x:ConnectionId='2' x:Name="lengthEntryBox" Margin="0,23,197,0" Text="0" VerticalAlignment="Top" RenderTransformOrigin="0.505,0.578" TextAlignment="Right" InputScope="Number"                                                                        />
+            <TextBlock HorizontalAlignment="Left" Margin="0,80,0,0" TextWrapping="Wrap" Text="To" VerticalAlignment="Top" FontSize="18"/>
+            <TextBlock x:Name="lengthAnswerDisplay" HorizontalAlignment="Left" Margin="0,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="40" FontWeight="Bold"/>
+            <TextBlock x:Name="errorDisplay" HorizontalAlignment="Left" Margin="68,2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" FontSize="18"/>
+            <ComboBox x:ConnectionId='3' x:Name="toLengthSelector" Margin="00,93,0,0" VerticalAlignment="Top" PlaceholderText="Select Unit"                                                     >
+                <ComboBoxItem Content="Centimeters"/>
+                <ComboBoxItem Content="Feet"/>
+                <ComboBoxItem Content="Inches"/>
+                <ComboBoxItem Content="Kilometers"/>
+                <ComboBoxItem Content="Meters"/>
+                <ComboBoxItem Content="Miles"/>
+                <ComboBoxItem Content="Millimeters"/>
+                <ComboBoxItem Content="Yards"/>
+            </ComboBox>
+            <ComboBox x:ConnectionId='4' x:Name="fromLengthSelector" Margin="170,14,0,0" VerticalAlignment="Top" PlaceholderText="Select Unit"                                                       >
+                <ComboBoxItem Content="Centimeters"/>
+                <ComboBoxItem Content="Feet"/>
+                <ComboBoxItem Content="Inches"/>
+                <ComboBoxItem Content="Kilometers"/>
+                <ComboBoxItem Content="Meters"/>
+                <ComboBoxItem Content="Miles"/>
+                <ComboBoxItem Content="Millimeters"/>
+                <ComboBoxItem Content="Yards"/>
+            </ComboBox>
+        </Grid>
+    </Grid>
+</Page>
+
