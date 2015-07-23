@@ -50,7 +50,7 @@ namespace UnitConverter
                     return "C";
 
                 case "Liters":
-                    return "l";
+                    return "L";
 
                 case "Milliliters":
                     return "ml";
@@ -62,7 +62,7 @@ namespace UnitConverter
                     return "tsp";
 
                 case "Quarts":
-                    return "qrt";
+                    return "q";
 
                 case "Fahrenheit":
                     return "F";
@@ -99,6 +99,18 @@ namespace UnitConverter
 
                 case "Meters/Second":
                     return "mps";
+
+                case "Centimeters":
+                    return "cm";
+
+                case "Meters":
+                    return "m";
+
+                case "Millimeters":
+                    return "mm";
+
+                case "Yards":
+                    return "y";
                   
                 default:
                     return "";
